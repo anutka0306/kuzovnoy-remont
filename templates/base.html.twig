@@ -668,6 +668,20 @@
                     });
                 });
             </script>
+
+            <script>
+                /* Слайдер о компании */
+                $(document).ready(function (){
+                    $('.aboutCompany__slider .stock__detailing-picture img').click(function (evt){
+                        let imgPath = $(this).attr('src');
+                        $('#about_current_picture img').fadeOut(500, 'linear', function (){
+                            $('#about_current_picture img').attr('src', imgPath);
+                        });
+                        $('#about_current_picture img').fadeIn(500);
+
+                    });
+                });
+            </script>
         {% endblock %}
     </body>
 </html>
