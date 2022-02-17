@@ -2,18 +2,644 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Body Repair</title>
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
+            {#{{ encore_entry_link_tags('app') }}#}
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         {% endblock %}
 
         {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
+            {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body class="body">
+    {% block header %}
+        <header class="header">
+            <section class="header__top">
+                <div class="header__top-wrapper section_size_large">
+                    <div class="header__top-info content_size_large content_size_medium">
+                        <div class="header__left-grid">
+                            <div class="logo logo_position_header">
+                                logo
+                            </div>
+                            <div class="header__address">
+                                <h3 class="header__paragraph header__paragraph_size_small">
+                                    <p>Мичуринский</p>
+                                    <p>ул. Удальцова, 60</p>
+                                    <p>8(495)150-77-21</p>
+                                </h3>
+                                <h3 class="header__paragraph header__paragraph_size_small">
+                                    <p>Севастопольский</p>
+                                    <p>Севастопольский пр-т, 95Б с.1</p>
+                                    <p>8(495)150-70-36</p>
+                                </h3>
+                                <h3 class="header__paragraph header__paragraph_size_small">
+                                    <p>Дмитровка</p>
+                                    <p>ул. Лобненская, 17 стр 1</p>
+                                    <p>8(495)150-70-73</p>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="header__phone">
+                            <h3 class="header__paragraph header__paragraph_size_large">
+                                <span>звонок бесплатный</span>
+                                <a href="tel: +78007756521" class="header__link-phone link">8 (800) 775-65-21</a>
+                                <span>Ежедневно с 8:00 до 22:00</span>
+                            </h3>
+                        </div>
+                        <div class="header__burger">
+                            <div class="header__burger-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="header__bot">
+                <div class="header__bot-wrapper section_size_large">
+                    <div class="header__bot-content content_size_large content_size_medium">
+                        <nav class="header__nav">
+                            <ul class="header__ul header__nav-ul">
+                                <li class="header__li header__nav-li header__nav-link_hover">
+                                    <a href="" class="link header__nav-link ">ремонт авто <span class="header__nav-marker">&#10095;</span></a>
+                                    <div class="header__carsBrand content_size_large content_size_medium">
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Mercedes-Benz-logo.png" alt="">
+                                                <p class="header__carsImages-label">Mercedes</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Volkswagen-logo.png" alt="">
+                                                <p class="header__carsImages-label">Volkswagen</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/BMW-logo.png" alt="">
+                                                <p class="header__carsImages-label">BMW</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Audi-logo.png" alt="">
+                                                <p class="header__carsImages-label">Audi</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Skoda-logo.png" alt="">
+                                                <p class="header__carsImages-label">Skoda</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Land-Rover-logo.png" alt="">
+                                                <p class="header__carsImages-label">Land Rover</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Jaguar-logo.png" alt="">
+                                                <p class="header__carsImages-label">Jaguar</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Ford-logo.png" alt="">
+                                                <p class="header__carsImages-label">Ford</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Chevrolet-logo.png" alt="">
+                                                <p class="header__carsImages-label">Chevrolet</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/KIA-logo.png" alt="">
+                                                <p class="header__carsImages-label">KИA</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Hyundai-logo.png" alt="">
+                                                <p class="header__carsImages-label">Hyundai</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Toyota-logo.png" alt="">
+                                                <p class="header__carsImages-label">Toyota</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Nissan-logo.png" alt="">
+                                                <p class="header__carsImages-label">Nissan</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Mitsubishi-logo.png" alt="">
+                                                <p class="header__carsImages-label">Mitsubishi</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Lexus-logo.png" alt="">
+                                                <p class="header__carsImages-label">Lexus</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Mazda-logo.png" alt="">
+                                                <p class="header__carsImages-label">Mazda</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Volvo-logo.png" alt="">
+                                                <p class="header__carsImages-label">Volvo</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Opel-logo.png" alt="">
+                                                <p class="header__carsImages-label">Opel</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Jeep-logo.png" alt="">
+                                                <p class="header__carsImages-label">Jeep</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Porsche-logo.png" alt="">
+                                                <p class="header__carsImages-label">Porsche</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Cadillac-logo.png" alt="">
+                                                <p class="header__carsImages-label">Cadilac</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Renault-logo.png" alt="">
+                                                <p class="header__carsImages-label">Renault</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Peugeot-logo.png" alt="">
+                                                <p class="header__carsImages-label">Peugeot</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Citroen-logo.png" alt="">
+                                                <p class="header__carsImages-label">Citroen</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Infiniti-logo.png" alt="">
+                                                <p class="header__carsImages-label">Infiniti</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Honda-logo.png" alt="">
+                                                <p class="header__carsImages-label">Honda</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Subaru-logo.png" alt="">
+                                                <p class="header__carsImages-label">Subaru</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Suzuki-logo.png" alt="">
+                                                <p class="header__carsImages-label">Suzuki</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/SsangYong-logo.png" alt="">
+                                                <p class="header__carsImages-label">Ssang Yong</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Chery-logo.png" alt="">
+                                                <p class="header__carsImages-label">Chery</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Buick-logo.png" alt="">
+                                                <p class="header__carsImages-label">Buick</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/General-Motors-logo.png" alt="">
+                                                <p class="header__carsImages-label">General Motors</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Bentley-logo.png" alt="">
+                                                <p class="header__carsImages-label">Bentley</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Pontiac-logo.png" alt="">
+                                                <p class="header__carsImages-label">Pontiac</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Acura-logo.png" alt="">
+                                                <p class="header__carsImages-label">Acura</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Hummer-logo.png" alt="">
+                                                <p class="header__carsImages-label">Hummer</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Saturn-logo.png" alt="">
+                                                <p class="header__carsImages-label">Saturn</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Oldsmobile-logo.png" alt="">
+                                                <p class="header__carsImages-label">Oldsmobile</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Lincoln-logo.png" alt="">
+                                                <p class="header__carsImages-label">Linkoln</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Isuzu-logo.png" alt="">
+                                                <p class="header__carsImages-label">Isuzu</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Chrysler-logo.png" alt="">
+                                                <p class="header__carsImages-label">Chrysler</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Dodge-logo.png" alt="">
+                                                <p class="header__carsImages-label">Dodge</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Maserati-logo.png" alt="">
+                                                <p class="header__carsImages-label">Maserati</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Alfa-Romeo-logo.png" alt="">
+                                                <p class="header__carsImages-label">Alfa Romeo</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Fiat-logo.png" alt="">
+                                                <p class="header__carsImages-label">Fiat</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Mini-logo.png" alt="">
+                                                <p class="header__carsImages-label">MINI</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Seat-logo.png" alt="">
+                                                <p class="header__carsImages-label">Seat</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Great-Wall-logo.png" alt="">
+                                                <p class="header__carsImages-label">Great Wall</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Daihatsu-logo.png" alt="">
+                                                <p class="header__carsImages-label">Daihatsu</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Datsun-logo.png" alt="">
+                                                <p class="header__carsImages-label">Datsun</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Saab-logo.png" alt="">
+                                                <p class="header__carsImages-label">SAAB</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Smart-logo.png" alt="">
+                                                <p class="header__carsImages-label">Smart</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Aston-Martin-logo.png" alt="">
+                                                <p class="header__carsImages-label">Aston Martin</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Ferrari-logo.png" alt="">
+                                                <p class="header__carsImages-label">Ferrari</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Genesis-logo.png" alt="">
+                                                <p class="header__carsImages-label">Genesis</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Lamborghini-logo.png" alt="">
+                                                <p class="header__carsImages-label">Lamborghini</p>
+                                            </a>
+                                        </div>
+                                        <div class="header__carsImages">
+                                            <a href="#" class="link">
+                                                <img src="images/carBrands/Rolls-Royce-logo.png" alt="">
+                                                <p class="header__carsImages-label">Rolls-Royce</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="header__li header__nav-li header__nav-link_hover">
+                                    <a href="" class="link header__nav-link">услуги <span class="header__nav-marker">&#10095;</span></a>
+                                    <ul class="header__subUl">
+                                        <li class="header__li header__subUl-li header__subUl-li_size_big">
+                                            <a href="#" class="link">Кузовной ремонт</a>
+                                            <ul class="header__subUl_size_small">
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="#" class="link">Локальный ремонт</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="#" class="link">Ремонт капота</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="#" class="link">Ремонт порогов</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="#" class="link">Ремонт крыла</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="#" class="link">Ремонт бампера</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="#" class="link">Ремонт крыши</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="#" class="link">Ремонт двери</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="#" class="link">Ремонт крышки багажника</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="#" class="link">Ремонт вмятин</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="#" class="link">Ремонт царапин</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="header__li header__subUl-li header__subUl-li_size_big">
+                                            <a href="#" class="link">Покраска кузова</a>
+                                            <ul class="header__subUl_size_small">
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Локальная покраска</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Полная покраска</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Покраска элементов кузова</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Покраска крыла</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Покраска бампера</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Покраска двери</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Покраска суппортов</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Покраска порогов</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Покраска царапин</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Покраска сколов</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="header__li header__subUl-li header__subUl-li_size_big">
+                                            <a href="#" class="link">Ремонт автостекол</a>
+                                            <ul class="header__subUl_size_small">
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Ремонт боковых зеркал</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Ремонт заднего стекла</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Ремонт стекла двери</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Ремонт лобового стекла</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Замена автостекол</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Удаление сколов</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Ремонт царапин</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Вклейка автостекол</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Установка автостекол</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Замена лобового стекла</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="header__li header__subUl-li header__subUl-li_size_big">
+                                            <a href="#" class="link">Детейлинг</a>
+                                            <ul class="header__subUl_size_small">
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Химчистка салона</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Полировка кузова</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Нанесение жидкого стекла</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Бронирование пленкой</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Тонировка стекол</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Ремонт и восстановление салона</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Шумоизоляция</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Антихром</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Полировка фар</a>
+                                                </li>
+                                                <li class="header__li header__subUl-li header__subUl-li_size_small">
+                                                    <a href="" class="link">Детейлинг мойка</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="header__li header__nav-li">
+                                    <a href="" class="link header__nav-link">Прайс лист</a>
+                                </li>
+                                <li class="header__li header__nav-li">
+                                    <a href="" class="link header__nav-link">примеры работ</a>
+                                </li>
+                                <li class="header__li header__nav-li">
+                                    <a href="" class="link header__nav-link">акции</a>
+                                </li>
+                                <li class="header__li header__nav-li">
+                                    <a href="" class="link header__nav-link">видео</a>
+                                </li>
+                                <li class="header__li header__nav-li">
+                                    <a href="" class="link header__nav-link">контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="header__callback">
+                            <a href="#" class="link header__callback-link">Получить консультацию</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+    {% endblock %}
+
+        {% block body %}
+        {% endblock %}
+
+    {% block footer %}
+        <footer class="footer">
+            <div class="footer-wrapper section_size_large">
+                <div class="footer__content content_size_large content_size_medium">
+                    <div class="footer__logo">LOGO</div>
+                    <ul class="footer__ul">
+                        <li class="footer__li"><a href="#" class="footer__link">О компании</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link">Контакты</a></li>
+                    </ul>
+                    <ul class="footer__ul">
+                        <li class="footer__li"><a href="#" class="footer__link">Прайс лист</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link">Примеры работ</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link">Акции</a></li>
+                    </ul>
+                    <ul class="footer__ul">
+                        <li class="footer__li"><a href="#" class="footer__link">Карта сайта</a></li>
+                    </ul>
+                    <ul class="footer__ul">
+                        <li class="footer__li"><a href="#" class="footer__link">Мойка автомобиля</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link">Полировка</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link">Защита кузова</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link">Защита и уход за салоном</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link">Удаление вмятин без покраски</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link">Ремонт лобовых окон</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link">Тонировка</a></li>
+                    </ul>
+                    <div class="footer__callback">
+                        <div class="footer__socials">
+                            <div class="footer__socials-item">
+                                <a href="#"><img src="images/icons/whatsapp.png" alt=""></a>
+                            </div>
+                            <div class="footer__socials-item">
+                                <a href="#"><img src="images/icons/VK.png" alt=""></a>
+                            </div>
+                            <div class="footer__socials-item">
+                                <a href="#"><img src="images/icons/instagram.png" alt=""></a>
+                            </div>
+                            <div class="footer__socials-item">
+                                <a href="#"><img src="images/icons/youtube.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="footer__phone">
+                            8 800 500-59-67
+                            <br>
+                            <span>звонок бесплатный</span>
+                        </div>
+                        <button class="footer__button">Обратный звонок</button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        {{ include('elements/popup.html.twig') }}
+    {% endblock %}
+
+        {% block javascripts_footer %}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="{{ asset('scripts/effects.js')}}"></script>
+            <script src="{{ asset('scripts/slider.js') }}"></script>
+        {% endblock %}
     </body>
 </html>
