@@ -468,6 +468,9 @@
 .advantage__img{
   height: 49px;
 }
+.aboutCompany__slider {
+  grid-column: 1/3 !important;
+}
 @media (min-width: 769px) {
   .header__nav-link_hover:hover > .header__carsBrand {
     display: grid;
@@ -973,6 +976,7 @@
 .stock__detailing-picture:first-child {
   grid-column: 1/3;
 }
+
 
 .stock__detailing-text {
   text-align: left;
