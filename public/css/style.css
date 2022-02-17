@@ -465,6 +465,9 @@
   height: 100%;
   display: block;
 }
+.advantage__img{
+  height: 49px;
+}
 @media (min-width: 769px) {
   .header__nav-link_hover:hover > .header__carsBrand {
     display: grid;
@@ -730,6 +733,7 @@
   height: 100%;
   margin-left: 15px;
   text-align: left;
+  text-transform: uppercase;
 
 }
 
@@ -737,6 +741,7 @@
   font-size: 15px;
   font-weight: normal;
   line-height: 15px;
+  text-transform: uppercase;
 }
 
 .advantage__item-image {
@@ -2499,7 +2504,8 @@ footer {
   }
 
   .advantage__img {
-    height: 3.385vw;
+    /*height: 3.385vw;*/
+    height: 49px;
     max-width: 100%;
     width: auto;
   }
@@ -3238,7 +3244,8 @@ footer {
   }
 
   .advantage__img {
-    height: 6vw;
+    /*height: 6vw;*/
+    height: 49px;
   }
 
   .advantage__text_size_large {
